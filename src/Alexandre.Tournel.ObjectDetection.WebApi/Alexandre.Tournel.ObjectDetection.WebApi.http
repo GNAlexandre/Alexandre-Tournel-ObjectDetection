@@ -1,0 +1,6 @@
+@Alexandre.Tournel.ObjectDetection.WebApi_HostAddress = http://localhost:5117
+
+GET {{Alexandre.Tournel.ObjectDetection.WebApi_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###

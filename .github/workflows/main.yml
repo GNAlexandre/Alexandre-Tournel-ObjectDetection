@@ -57,6 +57,15 @@ jobs:
           name: Publish win-x64 Alexandre.Tournel.ObjectDetection
           path: ./win-x64/Alexandre.Tournel.ObjectDetection
       
+  build Projet to Execute:
+    needs: [tags]
+    runs-on: ubuntu-latest
 
-  
-  
+    steps:
+      - uses: actions/checkout@v4
+      - name: Setup .NET
+        uses: actions/setup-dotnet@v4
+        with:
+          dotnet-version: 8.0.x
+      - name: Publish Console App
+        run: dotnet publish ./src/Alexandre.Tournel.ObjectDetection.ConsoleApp/Alexandre.Tournel.ObjectDetection.ConsoleApp.csproj --self-contained true --output ./win-x64/consoleapp -c Release -r win-x64 /p:PublishSingleFile=true /p:PublishTrimmed=true /p:PublishReadyToRun=true

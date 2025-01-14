@@ -68,4 +68,4 @@ jobs:
         with:
           dotnet-version: 8.0.x
       - name: Publish Console App
-        run: dotnet publish ./src/Alexandre.Tournel.ObjectDetection.ConsoleApp/Alexandre.Tournel.ObjectDetection.ConsoleApp.csproj --self-contained true --output ./win-x64/consoleapp -c Release -r win-x64 /p:PublishSingleFile=true /p:PublishTrimmed=true /p:PublishReadyToRun=true
+        run: dotnet publish ./src/Alexandre.Tournel.ObjectDetection.Console/Alexandre.Tournel.ObjectDetection.Console.csproj --self-contained true --output ./win-x64/consoleapp -c Release -r win-x64 /p:PublishSingleFile=true /p:PublishTrimmed=true /p:PublishReadyToRun=true

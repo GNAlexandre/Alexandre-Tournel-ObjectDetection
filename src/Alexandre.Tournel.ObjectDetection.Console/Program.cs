@@ -1,5 +1,6 @@
 ﻿using System;
 using System.IO;
+using System.Reflection;
 using System.Text.Json;
 using System.Threading.Tasks;
 
@@ -23,7 +24,7 @@ class Program
             imageScenesData.Add(imageBytes);
         }
 
-        var detectObjectInScenesResults = await new ObjectDetection().DetectObjectInScenesAsync(imageScenesData);
+        var detectObjectInScenesResults = await new Alexandre.Tournel.ObjectDetection.ObjectDetection().DetectObjectInScenesAsync(imageScenesData);
         foreach (var objectDetectionResult in detectObjectInScenesResults)
         {
             Console.WriteLine($"Box:{JsonSerializer.Serialize(objectDetectionResult.Box)}");

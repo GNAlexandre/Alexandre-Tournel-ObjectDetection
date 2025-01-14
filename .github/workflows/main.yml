@@ -57,7 +57,7 @@ jobs:
           name: Publish win-x64 Alexandre.Tournel.ObjectDetection
           path: ./win-x64/Alexandre.Tournel.ObjectDetection
       
-  build Projet to Execute:
+  build_Projet_to_Execute:
     needs: [tags]
     runs-on: ubuntu-latest
 
